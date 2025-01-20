@@ -1,0 +1,9 @@
+The solution involves utilizing the `background` shorthand property and incorporating a fallback mechanism.  By specifying the `background-color` within the `background` shorthand, we ensure it is rendered even if the image is unavailable. 
+
+```css
+div {
+  background: rgb(255, 0, 0) url('missing-image.png');
+}
+```
+
+This approach ensures that the background color is always displayed, even when the specified image cannot be loaded.  If the image *is* successfully loaded, it will be layered over the background color.
