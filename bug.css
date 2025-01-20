@@ -1,0 +1,12 @@
+The following CSS code snippet demonstrates an unusual issue where the specified background color is not applied correctly:
+
+```css
+div {
+  background-color: rgb(255, 0, 0); /* Should be red */
+  background-image: url('missing-image.png'); /* Image does not exist */
+}
+```
+
+The expectation is that the div element should have a red background. However, because the provided background image does not exist, the background color is often ignored by some browsers.
+
+This occurs because the browser prioritizes the background-image property over the background-color property when both are set, even if the background-image is invalid or unavailable. This can lead to unexpected visual results, especially when dealing with missing assets or broken links.
